@@ -1,183 +1,367 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Akshath Suresh Kumar</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshath Suresh Kumar</title>
 
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* Header */
 
     header {
+      min-height: 100vh;
+      background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed,
+        #0ea5e9
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 70px 20px;
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      padding: 20px;
     }
 
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 15px;
     }
 
-    header p {
-      font-size: 22px;
+    .hero p {
+      font-size: 1.4rem;
       color: #e0e7ff;
+      margin-bottom: 25px;
     }
+
+    .hero button {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #2563eb;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Navigation */
 
     nav {
+      position: sticky;
+      top: 0;
+      background: #020617;
+      z-index: 1000;
       text-align: center;
       padding: 15px;
-      background: #020617;
+      border-bottom: 1px solid #1e293b;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 15px;
+      margin: 0 15px;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 80px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #60a5fa;
     }
 
     .card {
       background: #1e293b;
-      padding: 25px;
-      border-radius: 18px;
-      margin: 20px 0;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      padding: 30px;
+      border-radius: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
     }
+
+    /* Grid */
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
       gap: 20px;
     }
 
     .skill {
-      background: #334155;
-      padding: 20px;
-      border-radius: 15px;
+      background: #1e293b;
+      padding: 25px;
       text-align: center;
-      font-size: 18px;
+      border-radius: 15px;
+      transition: .3s;
     }
+
+    .skill:hover {
+      transform: translateY(-8px);
+      background: #334155;
+    }
+
+    .skill span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* Project Cards */
 
     .project {
       border-left: 5px solid #60a5fa;
     }
 
+    .project h3 {
+      margin-bottom: 10px;
+      color: #93c5fd;
+    }
+
+    /* Stats */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 20px;
+    }
+
+    .stat {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 2.5rem;
+      color: #60a5fa;
+    }
+
+    /* Footer */
+
     footer {
       text-align: center;
-      padding: 25px;
+      padding: 30px;
       background: #020617;
       color: #94a3b8;
     }
 
     .highlight {
-      color: #93c5fd;
+      color: #60a5fa;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
+<header>
+  <div class="hero">
     <h1>Hi, I'm Akshath 👋</h1>
-    <p>Robotics | AI | ROS2 | Coding | Student | Gamer</p>
-  </header>
+    <p>Student • Robotics Builder • AI Enthusiast • Gamer • Developer</p>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#interests">Interests</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-  </nav>
+    <button onclick="document.getElementById('about').scrollIntoView();">
+      Learn More
+    </button>
+  </div>
+</header>
 
-  <section id="about">
-    <div class="card">
-      <h2>About Me</h2>
-      <p>
-        My name is <span class="highlight">Akshath</span>. I am a student who is passionate about
-        technology, robotics, artificial intelligence, coding, and building real-world projects.
-        I enjoy learning how computers, robots, and software systems work together.
-      </p>
-      <p>
-        I like challenging myself with new ideas and projects. I am interested in computer science,
-        AI, automation, engineering, and problem solving.
-      </p>
-    </div>
-  </section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#interests">Interests</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#stats">Stats</a>
+</nav>
 
-  <section id="interests">
-    <h2>Things I Like</h2>
+<section id="about">
+  <h2>About Me</h2>
 
-    <div class="grid">
-      <div class="skill">🤖 Robotics</div>
-      <div class="skill">🧠 Artificial Intelligence</div>
-      <div class="skill">💻 Coding</div>
-      <div class="skill">🎮 Video Games</div>
-      <div class="skill">⚽ Soccer</div>
-      <div class="skill">🎸 Guitar</div>
-      <div class="skill">🚀 Technology</div>
-      <div class="skill">🔧 Engineering</div>
-    </div>
-  </section>
+  <div class="card">
+    <p>
+      Hi! My name is <span class="highlight">Akshath Suresh Kumar</span>.
+      I'm a student passionate about technology, robotics, artificial
+      intelligence, software engineering, and problem solving.
+    </p>
 
-  <section id="projects">
-    <h2>My Projects</h2>
+    <br>
 
-    <div class="card project">
-      <h3>LENS Robot</h3>
-      <p>
-        One of my biggest projects is my robot called <b>LENS</b>. It uses robotics, AI,
-        voice commands, navigation, and messaging. The robot can listen for commands,
-        move around, take pictures, analyze what it sees, and send reports.
-      </p>
-    </div>
+    <p>
+      I enjoy building real-world projects that combine hardware,
+      software, AI, cloud technologies, and automation.
+      My goal is to continuously learn, create, and solve challenging problems.
+    </p>
 
-    <div class="card project">
-      <h3>Home Lab</h3>
-      <p>
-        I also work with a home lab setup where I learn about servers, Kubernetes,
-        Kafka, MQTT, networking, and automation. This helps me understand how real
-        technology systems are designed and connected.
-      </p>
+    <br>
+
+    <p>
+      Beyond technology, I enjoy soccer, video games, guitar,
+      learning new skills, and helping others through community service.
+    </p>
+  </div>
+</section>
+
+<section id="interests">
+  <h2>Things I Enjoy</h2>
+
+  <div class="grid">
+
+    <div class="skill">
+      <span>🤖</span>
+      Robotics
     </div>
 
-    <div class="card project">
-      <h3>Coding Projects</h3>
-      <p>
-        I enjoy building websites, scripts, apps, and small programs that solve problems
-        or help me learn new technologies.
-      </p>
+    <div class="skill">
+      <span>🧠</span>
+      Artificial Intelligence
     </div>
-  </section>
 
-  <section id="skills">
-    <h2>Skills I Am Learning</h2>
-
-    <div class="grid">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">Python</div>
-      <div class="skill">ROS2</div>
-      <div class="skill">Linux</div>
-      <div class="skill">Kubernetes</div>
-      <div class="skill">AI Models</div>
-      <div class="skill">Problem Solving</div>
+    <div class="skill">
+      <span>💻</span>
+      Programming
     </div>
-  </section>
 
-  <footer>
-    <p>Made by Akshath 🚀</p>
-  </footer>
+    <div class="skill">
+      <span>🎮</span>
+      Video Games
+    </div>
+
+    <div class="skill">
+      <span>⚽</span>
+      Soccer
+    </div>
+
+    <div class="skill">
+      <span>🎸</span>
+      Guitar
+    </div>
+
+    <div class="skill">
+      <span>☁️</span>
+      Cloud Computing
+    </div>
+
+    <div class="skill">
+      <span>🚀</span>
+      Technology
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card project">
+    <h3>PROXY Robot</h3>
+
+    <p>
+      PROXY is an AI-powered robotics project that combines voice commands,
+      computer vision, autonomous navigation, ROS2, and messaging systems.
+      The robot can navigate environments, capture images, analyze scenes,
+      and provide intelligent reports.
+    </p>
+  </div>
+
+  <div class="card project">
+    <h3>Home Lab Infrastructure</h3>
+
+    <p>
+      I run a personal home lab where I learn Kubernetes, Linux,
+      virtualization, networking, Kafka, MQTT, automation, and cloud-native
+      technologies.
+    </p>
+  </div>
+
+  <div class="card project">
+    <h3>Software Development</h3>
+
+    <p>
+      I enjoy building websites, automation tools, Python applications,
+      and other projects that help me learn modern software engineering.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills & Technologies</h2>
+
+  <div class="grid">
+
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Python</div>
+    <div class="skill">ROS2</div>
+    <div class="skill">Linux</div>
+    <div class="skill">Docker</div>
+    <div class="skill">Kubernetes</div>
+    <div class="skill">Git</div>
+    <div class="skill">Computer Vision</div>
+    <div class="skill">Artificial Intelligence</div>
+    <div class="skill">Problem Solving</div>
+
+  </div>
+</section>
+
+<section id="stats">
+  <h2>Quick Facts</h2>
+
+  <div class="stats">
+
+    <div class="stat">
+      <h3>400+</h3>
+      <p>Community Service Hours</p>
+    </div>
+
+    <div class="stat">
+      <h3>10+</h3>
+      <p>Technology Projects</p>
+    </div>
+
+    <div class="stat">
+      <h3>∞</h3>
+      <p>Curiosity To Learn</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>
+    © 2026 Akshath Suresh Kumar • Built with HTML & CSS 🚀
+  </p>
+</footer>
 
 </body>
 </html>
