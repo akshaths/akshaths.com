@@ -1,11 +1,183 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Akshath</title>
+  <title>Akshath Suresh Kumar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 22px;
+      color: #e0e7ff;
+    }
+
+    nav {
+      text-align: center;
+      padding: 15px;
+      background: #020617;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 18px;
+      margin: 20px 0;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      background: #334155;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .project {
+      border-left: 5px solid #60a5fa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    .highlight {
+      color: #93c5fd;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hi, I'm Akshath 👋</h1>
-  <p>Robotics | AI | ROS2 | Student</p>
+
+  <header>
+    <h1>Hi, I'm Akshath 👋</h1>
+    <p>Robotics | AI | ROS2 | Coding | Student | Gamer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#interests">Interests</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+  </nav>
+
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>
+        My name is <span class="highlight">Akshath</span>. I am a student who is passionate about
+        technology, robotics, artificial intelligence, coding, and building real-world projects.
+        I enjoy learning how computers, robots, and software systems work together.
+      </p>
+      <p>
+        I like challenging myself with new ideas and projects. I am interested in computer science,
+        AI, automation, engineering, and problem solving.
+      </p>
+    </div>
+  </section>
+
+  <section id="interests">
+    <h2>Things I Like</h2>
+
+    <div class="grid">
+      <div class="skill">🤖 Robotics</div>
+      <div class="skill">🧠 Artificial Intelligence</div>
+      <div class="skill">💻 Coding</div>
+      <div class="skill">🎮 Video Games</div>
+      <div class="skill">⚽ Soccer</div>
+      <div class="skill">🎸 Guitar</div>
+      <div class="skill">🚀 Technology</div>
+      <div class="skill">🔧 Engineering</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="card project">
+      <h3>LENS Robot</h3>
+      <p>
+        One of my biggest projects is my robot called <b>LENS</b>. It uses robotics, AI,
+        voice commands, navigation, and messaging. The robot can listen for commands,
+        move around, take pictures, analyze what it sees, and send reports.
+      </p>
+    </div>
+
+    <div class="card project">
+      <h3>Home Lab</h3>
+      <p>
+        I also work with a home lab setup where I learn about servers, Kubernetes,
+        Kafka, MQTT, networking, and automation. This helps me understand how real
+        technology systems are designed and connected.
+      </p>
+    </div>
+
+    <div class="card project">
+      <h3>Coding Projects</h3>
+      <p>
+        I enjoy building websites, scripts, apps, and small programs that solve problems
+        or help me learn new technologies.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills I Am Learning</h2>
+
+    <div class="grid">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">Python</div>
+      <div class="skill">ROS2</div>
+      <div class="skill">Linux</div>
+      <div class="skill">Kubernetes</div>
+      <div class="skill">AI Models</div>
+      <div class="skill">Problem Solving</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made by Akshath 🚀</p>
+  </footer>
+
 </body>
 </html>
